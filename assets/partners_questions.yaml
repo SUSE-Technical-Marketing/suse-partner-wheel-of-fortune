@@ -1,0 +1,243 @@
+# Partner Wheel of Fortune – partners and quiz questions.
+#
+# Per partner:
+#   name       Display name (also used for accessibility labels)
+#   logo       Path relative to assets/ (see assets/logos/)
+#   logo_tint  Optional. "dark" turns a white-on-transparent logo black so it is
+#              visible on the white wheel badge.
+#   questions  List (may be empty -> the app only offers "Reset").
+#     question     The question text
+#     options      Optional list of answer options (rendered as A, B, C, ...)
+#     answer       With options: the letter of the correct option (e.g. "B").
+#                  Without options: the answer text itself.
+#     explanation  Optional text shown when the answer is revealed.
+
+- name: "Traefik Labs"
+  logo: logos/traefik.svg
+  questions:
+    - question: "AI Gateway: What does an AI gateway do for traffic going to large language models?"
+      options:
+        - "Train and fine-tune the models on your company data"
+        - "Route LLM requests and apply guardrails like PII masking and prompt filtering"
+        - "Replace the GPUs needed to run inference"
+      answer: "B"
+    - question: "Agent Governance: What does an MCP gateway control?"
+      options:
+        - "Which MCP servers and tools an AI agent is allowed to call"
+        - "How much GPU memory each model can use"
+        - "The training data a model was built on"
+      answer: "A"
+    - question: "Sovereign AI with SUSE: What does Traefik Hub add to SUSE AI Factory with NVIDIA?"
+      options:
+        - "The Kubernetes distribution the platform runs on"
+        - "Backup and disaster recovery for AI workloads"
+        - "Runtime governance for model and agent tool calls through its AI Gateway and MCP Gateway"
+      answer: "C"
+
+- name: "Vultr"
+  logo: logos/vultr.svg
+  # NOTE: the source sheet does not mark correct answers for Vultr; these were
+  # inferred from the question wording. Please have the partner confirm them.
+  questions:
+    - question: "Who is Morty, Vultr's most popular team member?"
+      options:
+        - "Vultr's AI chatbot"
+        - "Vultr's mascot"
+        - "The engineer who built Vultr"
+      answer: "B"
+    - question: "What happens when SUSE AI Factory meets Vultr?"
+      options:
+        - "They open a factory that makes GPUs"
+        - "They build an AI-powered coffee machine"
+        - "They help enterprises deploy and manage AI workloads"
+      answer: "C"
+    - question: "Which of these can you run on Vultr?"
+      options:
+        - "AI workloads on GPUs"
+        - "Kubernetes clusters"
+        - "Both A and B (and much more!)"
+      answer: "C"
+
+- name: "Tensormesh"
+  logo: logos/tensormesh.png
+  logo_tint: dark
+  questions:
+    - question: "In LLM inference, what does “KV” in “KV cache” stand for?"
+      options:
+        - "Key-Value"
+        - "Kernel-Vector"
+        - "Knowledge-Vault"
+      answer: "A"
+      explanation: "These are the attention keys and values a model computes for each token."
+    - question: "Tensormesh’s founders created which open-source project for storing and reusing KV cache?"
+      options:
+        - "LangChain"
+        - "LMCache"
+        - "llama.cpp"
+      answer: "B"
+      explanation: "It’s used with inference engines like vLLM."
+    - question: "What’s the main benefit of using the Tensormesh platform for KV cache?"
+      options:
+        - "It makes your model bigger"
+        - "It improves your training data"
+        - "It reuses work the model has already done, so you get faster responses and lower inference costs on fewer GPUs"
+      answer: "C"
+      explanation: "Tensormesh stores the KV cache and reuses it across requests, so GPUs don’t recompute tokens they’ve already processed."
+
+- name: "Tigera"
+  logo: logos/tigera.png
+  questions:
+    - question: "Why is it hard to spot an AI agent in a Kubernetes cluster?"
+      options:
+        - "To Kubernetes, an AI agent looks like any other pod"
+        - "AI agents run outside the cluster"
+        - "AI agents don’t get IP addresses"
+        - "Kubernetes hides AI agents by default"
+      answer: "A"
+      explanation: "Nothing in the pod spec says “this is an AI agent.” You have to look at what it does."
+    - question: "Why are shared API keys a problem for AI agents?"
+      options:
+        - "You can’t tell which AI agent used the key, and revoking it breaks everyone who shares it"
+        - "They make LLM calls slower"
+        - "Kubernetes can’t store them"
+        - "They expire every minute"
+      answer: "A"
+      explanation: "Each AI agent needs its own identity, not a shared secret."
+    - question: "You delete a misbehaving AI agent’s pod. What usually happens next?"
+      options:
+        - "Its Deployment recreates the pod"
+        - "The AI agent is gone for good"
+        - "The whole namespace is deleted"
+        - "The node reboots"
+      answer: "A"
+      explanation: "Kubernetes keeps restoring the state you declared, so deleting a pod rarely stops anything."
+
+- name: "WSO2"
+  logo: logos/wso2.png
+  questions: []
+
+- name: "Percona"
+  logo: logos/percona.svg
+  questions: []
+
+- name: "NVIDIA"
+  logo: logos/nvidia.svg
+  questions: []
+
+- name: "Klique (by ClearML)"
+  logo: logos/klique.svg
+  # NOTE: the source sheet has no answer for question 2, only a hint. The hint
+  # is shown as the answer until the partner supplies one.
+  questions:
+    - question: "Before we became Klique, what was our name?"
+      answer: "ClearML"
+    - question: "How can you set up advanced multi-tenancy in Kubernetes on Klique?"
+      answer: "Hint: think of what you can do on SUSE Rancher Prime’s K3k"
+    - question: "Is Klique part of the SUSE AI Factory with NVIDIA?"
+      answer: "Yes"
+
+- name: "Dell Technologies"
+  logo: logos/dell.svg
+  questions:
+    - question: "What is Dell Technologies' global market rank in enterprise servers and storage?"
+      options:
+        - "#1 Worldwide Leader"
+        - "Top 10"
+        - "#5"
+      answer: "A"
+      explanation: "Dell is #1 in servers and storage. SUSE Linux Enterprise Server is certified across Dell PowerEdge hardware to run mission-critical enterprise workloads."
+    - question: "Which iconic server line powers Dell Technologies' enterprise hardware portfolio?"
+      options:
+        - "PowerEdge"
+        - "ThinkPad"
+        - "Mac Pro"
+      answer: "A"
+      explanation: "Dell PowerEdge paired with SUSE Rancher Prime gives teams a rock-solid, scalable base for Kubernetes and modern hybrid cloud environments."
+    - question: "Beside edge computing and multi-cloud, what is Dell Technologies' top infrastructure priority?"
+      options:
+        - "Artificial Intelligence (AI)"
+        - "Mainframes"
+        - "Dial-up modems"
+      answer: "A"
+      explanation: "Together, SUSE AI and Dell infrastructure help enterprises deploy open-source AI models safely on-premises and out at the edge."
+
+- name: "CloudCasa"
+  logo: logos/cloudcasa.svg
+  questions:
+    - question: "SUSE AI Factory with NVIDIA + CloudCasa: How do you add CloudCasa protection to SUSE AI Factory workloads?"
+      options:
+        - "Rebuild every AI blueprint to include backup"
+        - "Install CloudCasa from the SUSE Rancher Prime extensions catalog and protect the blueprints as they are"
+        - "Copy the GPU servers to tape"
+      answer: "B"
+    - question: "NVIDIA OpenShell + CloudCasa: What does NVIDIA OpenShell do, and what does CloudCasa add?"
+      options:
+        - "OpenShell runs AI agents in secure, policy-controlled sandboxes on Kubernetes; CloudCasa keeps those agent workloads and their data recoverable"
+        - "OpenShell replaces Kubernetes; CloudCasa replaces the GPUs"
+        - "OpenShell is a backup tool; CloudCasa is a chatbot"
+      answer: "A"
+    - question: "SUSE + Dell + CloudCasa: How does CloudCasa DR work with Dell PowerStore for SUSE Rancher Prime?"
+      options:
+        - "CloudCasa copies all the data over the network itself"
+        - "CloudCasa orchestrates failover using PowerStore’s native replication, for both containers and VMs"
+        - "DR only works within a single site"
+      answer: "B"
+
+- name: "Portworx by Everpure"
+  logo: logos/portworx.svg
+  questions:
+    - question: "What does Portworx manage?"
+      options:
+        - "Compute"
+        - "Networking"
+        - "Storage"
+      answer: "C"
+    - question: "True or false: Portworx and SUSE Virtualization enable you to run VMs on Kubernetes without refactoring."
+      options:
+        - "True"
+        - "False"
+      answer: "A"
+      explanation: "Embrace cloud-native practices for applications while still seamlessly supporting your existing VM infrastructure, modernizing workloads at your own pace without replacing a virtualization layer."
+    - question: "Which two types of workloads can Portworx and SUSE help manage consistently across environments?"
+      answer: "Virtual machines (VMs) and containers."
+      explanation: "Eliminate siloed infrastructure and reduce operational friction from separately managing VMs and modern workloads with a single, consistent, and unified management platform with SUSE and Portworx."
+
+- name: "Veeam Software"
+  logo: logos/veeam.svg
+  questions:
+    - question: "SUSE Rancher: What does Veeam Kasten protect in a SUSE Rancher-managed Kubernetes environment?"
+      answer: "Applications, Kubernetes configuration, and persistent data"
+      explanation: "Veeam Kasten provides application-aware protection that captures the application, its metadata/configuration, and associated storage, enabling reliable backup, recovery, and mobility across Kubernetes environments."
+    - question: "SUSE Virtualization: What is a key benefit of Veeam Kasten for SUSE Virtualization environments?"
+      answer: "Unified protection for both virtual machines and containers using a single policy framework"
+      explanation: "SUSE Virtualization runs KubeVirt-based VMs alongside Kubernetes workloads. Veeam Kasten protects both VMs and containers through a common, Kubernetes-native protection model."
+    - question: "Open Source / No Vendor Lock-In: How do SUSE and Veeam Kasten help organizations avoid vendor lock-in?"
+      answer: "By supporting open architectures, multiple clouds, diverse Kubernetes environments, and portable data recovery"
+      explanation: "Choose the infrastructure, cloud, and storage that fit your business without changing your protection strategy."
+
+- name: "SUSE"
+  logo: logos/suse.svg
+  # Source sheet: all correct answers are A. Distractor typos fixed
+  # ("Cloudj" -> "Cloud", "Piilot" -> "Pilot").
+  questions:
+    - question: "What is the name of the SUSE mascot?"
+      options:
+        - "Geeko"
+        - "Cami"
+        - "Liz"
+        - "Godzilla"
+      answer: "A"
+    - question: "What are the dual install-time operating modes introduced with SUSE Linux Enterprise Server 16.1?"
+      options:
+        - "Standard and Immutable"
+        - "Core and Cloud"
+        - "Container and VMs"
+        - "Data Centers and Edge"
+      answer: "A"
+    - question: "What is the name of the supervisor agent responsible for coordinating specialized domain agents in SUSE Rancher Prime?"
+      options:
+        - "Liz"
+        - "Geeko"
+        - "Jarvis"
+        - "Pilot"
+      answer: "A"

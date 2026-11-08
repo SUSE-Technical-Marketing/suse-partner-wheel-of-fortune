@@ -1,0 +1,181 @@
+Dell,ISV,Yes,"Spin-the-Wheel Dell Trivia 
+
+Question 1: 
+What is Dell Technologies' global market rank in enterprise servers and storage?
+• a) #1 Worldwide Leader 
+• b) Top 10
+• c) #5
+Quick Booth Insight: ""Correct! Dell is #1 in servers and storage. Did you know SUSE Linux Enterprise Server is certified across Dell PowerEdge hardware to run mission-critical enterprise workloads?"" 
+Question 2: 
+Which iconic server line powers Dell Technologies' enterprise hardware portfolio?
+• a) PowerEdge 
+• b) ThinkPad
+• c) Mac Pro
+Quick Booth Insight:
+""Dell PowerEdge paired with SUSE Rancher Prime gives teams a rock-solid, scalable base for Kubernetes and modern hybrid cloud environments.""
+Question 3: 
+Beside edge computing and multi-cloud, what is Dell Technologies' top infrastructure priority?
+• a) Artificial Intelligence (AI) 
+• b) Mainframes
+• c) Dial-up modems
+Quick Booth Insight:
+""Together, SUSE AI and Dell infrastructure help enterprises deploy open-source AI models safely on-premises and out at the edge."""
+Portworx,Storage ,Yes,"1) General Question
+Question: What does Portworx manage?
+Options: Compute, networking, storage
+Answer: Storage
+
+2) Modern Virtualization
+Question: True or false - Portworx and SUSE Virtualization enable you to run VMs on Kubernetes without refactoring.
+Answer: True
+
+Context: Embrace cloud-native practices for applications while still seamlessly supporting your existing VM infrastructure, modernizing workloads at your own pace without replacing a virtualization layer.
+
+3) Unified Workloads 
+Question: Which two types of workloads can Portworx and SUSE help manage consistently across environments?
+Answer: Virtual machines (VMs) and containers.
+
+Context: Eliminate siloed infrastructure and reduce operational friction from separately managing VMs and modern workloads with a single, consistent, and unified management platform with SUSE and Portworx. "
+WSO2,ISV,,
+Percona,ISV,,
+Traefik Labs,ISV,Yes,"Question 1: AI Gateway
+What does an AI gateway do for traffic going to large language models?
+
+A. Train and fine-tune the models on your company data
+B. Route LLM requests and apply guardrails like PII masking and prompt filtering
+C. Replace the GPUs needed to run inference
+Correct answer: B
+
+Question 2: Agent Governance
+What does an MCP gateway control?
+
+A. Which MCP servers and tools an AI agent is allowed to call
+B. How much GPU memory each model can use
+C. The training data a model was built on
+Correct answer: A
+
+Question 3: Sovereign AI with SUSE
+What does Traefik Hub add to SUSE AI Factory with NVIDIA?
+
+A. The Kubernetes distribution the platform runs on
+B. Backup and disaster recovery for AI workloads
+C. Runtime governance for model and agent tool calls through its AI Gateway and MCP Gateway
+Correct answer: C"
+Tensormesh,ISV,Yes,"In LLM inference, what does “KV” in “KV cache” stand for?
+a) Key-Value
+b) Kernel-Vector
+c) Knowledge-Vault
+✅ Answer: a) Key-Value. These are the attention keys and values a model computes for each token.
+Tensormesh’s founders created which open-source project for storing and reusing KV cache?
+a) LangChain
+b) LMCache
+c) llama.cpp
+✅ Answer: b) LMCache. It’s used with inference engines like vLLM.
+3. What’s the main benefit of using the Tensormesh platform for KV cache?
+a) It makes your model bigger
+b) It improves your training data
+c) It reuses work the model has already done, so you get faster responses and lower inference costs on fewer GPUs
+✅ Answer: c). Tensormesh stores the KV cache and reuses it across requests, so GPUs don’t recompute tokens they’ve already processed."
+ClearML,ISV,Yes,"1. Before we became Klique, what was our name? 
+ClearML
+2. How can you set up advanced multi-tenancy in Kubernetes on Klique? 
+Hint: think of what you can do on Rancher SUSE Rancher Prime's K3k
+3. Is Klique part of the SUSE AI Factory with NVIDIA? 
+Yes"
+Cloudcasa,ISV,Yes,"1. SUSE AI Factory with NVIDIA + CloudCasa: How do you add CloudCasa protection to SUSE AI Factory workloads?
+A. Rebuild every AI blueprint to include backup
+B. Install CloudCasa from the SUSE Rancher Prime extensions catalog and protect the blueprints as they are
+C. Copy the GPU servers to tape
+Correct answer: B
+
+2. NVIDIA OpenShell + CloudCasa: What does NVIDIA OpenShell do, and what does CloudCasa add?
+A. OpenShell runs AI agents in secure, policy-controlled sandboxes on Kubernetes; CloudCasa keeps those agent workloads and their data recoverable
+B. OpenShell replaces Kubernetes; CloudCasa replaces the GPUs
+C. OpenShell is a backup tool; CloudCasa is a chatbot
+Correct answer: A
+
+3. SUSE + Dell + CloudCasa: How does CloudCasa DR work with Dell PowerStore for SUSE Rancher Prime?
+A. CloudCasa copies all the data over the network itself
+B. CloudCasa orchestrates failover using PowerStore’s native replication, for both containers and VMs 
+C. DR only works within a single site
+Correct answer: B"
+Oracle,Cloud provider/MSP,Yes,
+Veeam,ISV,Yes,"1. SUSE Rancher
+Question:
+What does Veeam Kasten protect in a SUSE Rancher-managed Kubernetes environment?
+Answer:
+Applications, Kubernetes configuration, and persistent data
+Why it matters (for booth staff):
+Veeam Kasten provides application-aware protection that captures the application, its metadata/configuration, and associated storage, enabling reliable backup, recovery, and mobility across Kubernetes environments.
+2. SUSE Virtualization
+Question:
+What is a key benefit of Veeam Kasten for SUSE Virtualization environments?
+Answer:
+Unified protection for both virtual machines and containers using a single policy framework
+Why it matters (for booth staff):
+SUSE Virtualization runs KubeVirt-based VMs alongside Kubernetes workloads. Veeam Kasten protects both VMs and containers through a common, Kubernetes-native protection model.
+3. Open Source / No Vendor Lock-In
+Question:
+How do SUSE and Veeam Kasten help organizations avoid vendor lock-in?
+Answer:
+By supporting open architectures, multiple clouds, diverse Kubernetes environments, and portable data recovery
+Takeaway:
+Choose the infrastructure, cloud, and storage that fit your business without changing your protection strategy."
+Tigera,ISV,,"All Answers A are the correct answers:
+
+1. Why is it hard to spot an AI agent in a Kubernetes cluster?
+A. To Kubernetes, an AI agent looks like any other pod 
+B. AI agents run outside the cluster
+C. AI agents don’t get IP addresses
+D. Kubernetes hides AI agents by default
+Why: Nothing in the pod spec says “this is an AI agent.” You have to look at what it does.
+
+2. Why are shared API keys a problem for AI agents?
+A. You can’t tell which AI agent used the key, and revoking it breaks everyone who shares it 
+B. They make LLM calls slower
+C. Kubernetes can’t store them
+D. They expire every minute
+Why: Each AI agent needs its own identity, not a shared secret.
+
+3. You delete a misbehaving AI agent’s pod. What usually happens next?
+A. Its Deployment recreates the pod 
+B. The AI agent is gone for good
+C. The whole namespace is deleted
+D. The node reboots
+Why: Kubernetes keeps restoring the state you declared, so deleting a pod rarely stops anything."
+Vultr,Cloud provider/MSP,Yes,"Q1. Who is Morty, Vultr's most popular team member?
+A. Vultr's AI chatbot
+B. Vultr's mascot
+C. The engineer who built Vultr
+
+Q2. What happens when SUSE AI Factory meets Vultr?
+A. They open a factory that makes GPUs
+B. They build an AI-powered coffee machine
+C. They help enterprises deploy and manage AI workloads
+
+Q3. Which of these can you run on Vultr?
+A. AI workloads on GPUs
+B. Kubernetes clusters
+C. Both A and B (and much more!)"
+EDB,Storage ,,
+SUSE,ISV,,"SUSE QUESTIONS:
+(All correct answers are A)
+
+1.  What is the name of the SUSE Mascot?
+a. Geeko
+b.  Cami
+c. Liz
+d. Godzilla
+
+2. What are the dual install-time operating modes introduced with SUSE Linux Enterprise Server 16.1?
+a.  Standard and Immutable
+b.  Core and Cloudj
+c.  Container and VMs
+d. Data Centers and Edge
+
+3. What is the name of the supervisor agent responsible for coordinating specialized domain agents in SUSE Rancher Prime?
+a. Liz
+b. Geeko
+c. Jarvis
+d. Piilot
+"

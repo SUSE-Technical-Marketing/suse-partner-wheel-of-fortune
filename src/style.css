@@ -1,0 +1,54 @@
+:root {
+  /* SUSE brand palette */
+  --pine: #0c322c;
+  --jungle: #30ba78;
+  --mint: #90ebcd;
+  --persimmon: #fe7c3f;
+  --waterhole: #2453ff;
+  --midnight: #192072;
+  --fog: #efefef;
+  font-family: 'SUSE Variable', 'SUSE', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html, body { height: 100%; margin: 0; }
+
+body {
+  background: radial-gradient(1200px 800px at 50% 30%, #11473f 0%, var(--pine) 60%, #071f1b 100%);
+  background-attachment: fixed;
+  background-color: var(--pine);
+  color: #fff;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+
+button { font: inherit; cursor: pointer; }
+
+.btn {
+  border: 0;
+  border-radius: 999px;
+  padding: 0.55em 1.8em;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  color: #fff;
+  background: var(--jungle);
+  box-shadow: 0 8px 0 #1f8a57, 0 14px 28px rgba(0, 0, 0, 0.35);
+  transition: transform 0.12s ease, box-shadow 0.12s ease, filter 0.12s ease;
+}
+.btn:hover:not(:disabled) { filter: brightness(1.08); }
+.btn:active:not(:disabled) { transform: translateY(6px); box-shadow: 0 2px 0 #1f8a57, 0 6px 14px rgba(0, 0, 0, 0.35); }
+.btn:disabled { opacity: 0.55; cursor: not-allowed; }
+.btn:focus-visible { outline: 4px solid var(--mint); outline-offset: 4px; }
+.btn--big { font-size: 5.2cqh; padding: 0.3em 1.8em; }
+
+/* Everything lives in a 16:9 stage that scales to fit the window: no scrolling. */
+.stage {
+  width: min(100vw, calc(100dvh * 16 / 9));
+  aspect-ratio: 16 / 9;
+  container-type: size;
+  display: flex;
+  flex-direction: column;
+  padding: 0 3cqw;
+}
