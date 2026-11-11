@@ -122,8 +122,27 @@
 
 - name: "NVIDIA"
   logo: logos/nvidia.svg
-  questions: []
-
+  questions:
+    - question: "OpenShell, now a CNCF Sandbox project, helps organizations do what?"
+      options:
+        - "Schedule AI workloads across shared GPUs"
+        - "Control which systems and resources AI agents can access"
+        - "Deploy optimized AI models for inference"
+      answer: "B"
+      explanation: "OpenShell enforces boundaries around what AI agents can access and do."
+    - question: "How does SUSE AI Factory with NVIDIA help enterprises adapt as AI technology changes?"
+      options:
+        - "Standardize on one model across all AI workloads"
+        - "Build a separate platform for each new AI use case"
+        - "Use a composable, open architecture to evolve models, tools, and infrastructure"
+      answer: "C"
+    - question: "What does NVIDIA Run:ai help teams manage on Kubernetes?"
+      options:
+        - "GPU allocation and scheduling for AI workloads"
+        - "Model packaging and versioning for deployment"
+        - "Network access and security policies for AI agents"
+      answer: "A"
+      explanation: "Run:ai pools and dynamically allocates GPU resources across AI workloads, helping teams use shared infrastructure more efficiently."
 - name: "Klique (by ClearML)"
   logo: logos/klique.svg
   # NOTE: the source sheet has no answer for question 2, only a hint. The hint
