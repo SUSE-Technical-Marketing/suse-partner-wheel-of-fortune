@@ -118,8 +118,27 @@
 
 - name: "Percona"
   logo: logos/percona.svg
-  questions: []
-
+  questions:
+  - question: “What does the name Percona stand for?”
+    options:
+        - “Persistent Connection Analytics”
+        - “Performance Consulting”
+        - “Personal Cloud Network”
+    answer: “B”
+    explanation: “”
+  - question: “Is it sane to run your database workloads on Kubernetes?”
+    options:
+        - “Yes, always. Every database belongs on Kubernetes.”
+        - “No, never. Kubernetes is only for stateless apps.”
+        - “Both yes and no. It depends on your team, workload, and tooling.”
+    answer: “C”
+  - question: “Which two database engines can Percona help you run on Kubernetes?”
+    options:
+        - “Oracle and SQL Server”
+        - “MySQL and PostgreSQL”
+        - “Snowflake and Cassandra”
+    answer: “B”
+    explanation: “”
 - name: "NVIDIA"
   logo: logos/nvidia.svg
   questions:
